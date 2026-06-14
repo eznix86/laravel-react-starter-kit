@@ -2,13 +2,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "npx vp build",
-    "build:ssr": "npx vp build && npx vp build --ssr",
-    "dev": "npx vp dev",
-    "lint": "NODE_OPTIONS='--experimental-strip-types' npx vp fmt resources/ && NODE_OPTIONS='--experimental-strip-types' npx vp lint --fix",
-    "test:lint": "NODE_OPTIONS='--experimental-strip-types' npx vp fmt --check resources/ && NODE_OPTIONS='--experimental-strip-types' npx vp lint",
-    "test:types": "tsc --noEmit",
-    "doctor": "npx react-doctor@latest"
+    "build": "bun --bun vp build",
+    "build:ssr": "bun --bun vp build && bun --bun vp build --ssr",
+    "dev": "bun --bun vp dev",
+    "lint": "NODE_OPTIONS='--experimental-strip-types' bun --bun vp fmt resources/ && NODE_OPTIONS='--experimental-strip-types' bun --bun vp lint --fix",
+    "test:lint": "NODE_OPTIONS='--experimental-strip-types' bun --bun vp fmt --check resources/ && NODE_OPTIONS='--experimental-strip-types' bun --bun vp lint",
+    "test:types": "bun --bun tsc --noEmit",
+    "doctor": "bun --bun react-doctor@latest"
   },
   "devDependencies": {
     "@laravel/vite-plugin-wayfinder": "^0.1.7",
