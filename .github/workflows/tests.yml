@@ -57,6 +57,9 @@ jobs:
       - name: Install Bun Dependencies
         run: bun install
 
+      - name: Generate Wayfinder Routes
+        run: php artisan wayfinder:generate
+
       - name: Build Assets
         run: bun run build
 

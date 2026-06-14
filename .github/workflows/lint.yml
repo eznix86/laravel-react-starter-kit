@@ -31,8 +31,14 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+          composer install -q --no-ansi --no-interaction --no-progress --prefer-dist
           bun install
+
+      - name: Generate Wayfinder Routes
+        run: |
+          cp .env.example .env
+          php artisan key:generate
+          php artisan wayfinder:generate
 
       - name: Run Lint
         run: composer lint
