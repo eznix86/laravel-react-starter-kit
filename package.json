@@ -2,13 +2,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "bun --bun vp build",
-    "build:ssr": "bun --bun vp build && bun --bun vp build --ssr",
-    "dev": "bun --bun vp dev",
-    "lint": "NODE_OPTIONS='--experimental-strip-types' bun --bun vp fmt resources/ && NODE_OPTIONS='--experimental-strip-types' bun --bun vp lint --fix",
-    "test:lint": "NODE_OPTIONS='--experimental-strip-types' bun --bun vp fmt --check resources/ && NODE_OPTIONS='--experimental-strip-types' bun --bun vp lint",
-    "test:types": "bun --bun tsc --noEmit",
-    "doctor": "bun --bun react-doctor@latest"
+    "build": "bunx vp build",
+    "build:ssr": "bunx vp build && bunx vp build --ssr",
+    "dev": "bunx vp dev",
+    "lint": "NODE_OPTIONS='--experimental-strip-types' bunx vp fmt resources/ && NODE_OPTIONS='--experimental-strip-types' bunx vp lint --fix",
+    "test:lint": "NODE_OPTIONS='--experimental-strip-types' bunx vp fmt --check resources/ && NODE_OPTIONS='--experimental-strip-types' bunx vp lint",
+    "test:types": "bunx tsc --noEmit",
+    "doctor": "bunx react-doctor@latest"
   },
   "devDependencies": {
     "@laravel/vite-plugin-wayfinder": "^0.1.7",
